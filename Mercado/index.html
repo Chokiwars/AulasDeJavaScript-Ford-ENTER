@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+</head>
+<body>
+    <script>
+        function ovosMercados() {
+            let ovos = prompt("Tem ovos no mercado? sim/não");
+            let possuiOvos = ovos == "sim";
+            let itensComprados = "";
+
+            if (possuiOvos) {
+                itensComprados = "Leite";
+            } else {
+                alert("Passou na sessão de congelados");
+                itensComprados = "Lasanha congelada";
+            }
+
+            alert("No final acabei comprando " + itensComprados);
+        }
+        window.onload = ovosMercados;
+    </script>
+</body>
+</html>
