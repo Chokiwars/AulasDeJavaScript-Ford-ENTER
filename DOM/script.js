@@ -1,30 +1,34 @@
 window.onload = function () {
     const buttons = document.querySelectorAll('button');
+    const mensagemDiv = document.getElementById('mensagem')
 
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
             const dia = this.getAttribute('data-dia');
+            let mensagem = '';
 
             switch (dia) {
-                case 'segunda':
-                    alert('Dia de começar a semana com alegria!');
+                case "segunda":
+                    mensagem ="Dia de começar a semana com energia!";
                     break;
-                case 'terça':
-                    alert('Hora de aprender coisas novas!');
+                case "terça":
+                    mensagem ="Hora de aprender coisas novas!";
                     break;
-                case 'quarta':
-                    alert('Metade da semana, continue firme!');
+                case "quarta":
+                    mensagem ="Metade da semana, continue firme!";
                     break;
-                case 'quinta':
-                    alert('Quase lá um pouco mais de esforço!,');
+                case "quinta":
+                    mensagem ="Quase lá, um pouco mais de esforço!";
                     break;
-                case 'sexta':
-                    alert('Dia de comemorar, o fim de semana está chegando!');
+                case "sexta":
+                    mensagem ="Dia de comemorar, o fim de semana está chegando!";
                     break;
-                case 'fim de semana':
-                    alert('Fim de semana! Descanse e divirta-se!');
-                    break;
+                default:
+                    mensagem ="Final de semana! Descanse e divirta-se!";
             }
+
+            mensagemDiv.textContent = mensagem;
+
         });
     });
-}
+};

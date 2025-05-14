@@ -1,43 +1,39 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
 }
 
 h1 {
-    margin-top: 80px;
-    color: rgb(55, 55, 55);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 4rem;
+    color: #333;
 }
 
-.botoesContainer {
-    /* border: solid 2px red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
-    gap: 30px;
+.buttons-container {
+    margin-top: 20px;
 }
 
-.botoesContainer button {
-    /* border: solid rgb(17, 0, 255) 2px; */
-    border: none;
-    background-color: rgb(6, 192, 83);
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button {
+    background-color: #824caf; /* verde */
     color: white;
-    height: 100px;
-    width: auto;
-    padding: 40px;
-    border-radius: 15px;
+    padding: 10px 20px auto;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    height: 60px;
+    width: 120px;
 }
 
-span {
-    background-color: rgb(231, 231, 231);
-    height: 300px;
-    width: 100%;
+button:hover {
+    background-color: #6c3c95;
+}
+
+.mensagem {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
 }
