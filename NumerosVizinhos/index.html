@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Números Vizinhos</title>
+  <meta charset="UTF-8">
+  <title>Números Vizinhos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+
+  <h2>Informe um número:</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="mostrarVizinhos()">Calcular Vizinhos</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
