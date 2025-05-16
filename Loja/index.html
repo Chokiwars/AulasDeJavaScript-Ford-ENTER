@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
+  <meta charset="UTF-8">
+  <title>Opções de Pagamento - Loja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+
+  <h2>Simulador de Pagamento - Loja</h2>
+
+  <label for="precoProduto">Preço do produto (R$):</label><br>
+  <input type="number" id="precoProduto" placeholder="Ex: 200.00" step="0.01"><br>
+
+  <button onclick="mostrarOpcoesPagamento()">Ver Opções de Pagamento</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
