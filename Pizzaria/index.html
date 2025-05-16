@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria</title>
+  <meta charset="UTF-8">
+  <title>Pizzaria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+
+  <h2>Dividir conta da pizzaria</h2>
+
+  <label for="valorConta">Valor total da conta (R$):</label><br>
+  <input type="number" id="valorConta" placeholder="Ex: 120.50" step="0.01"><br>
+
+  <label for="qtdClientes">Número de clientes:</label><br>
+  <input type="number" id="qtdClientes" placeholder="Ex: 4"><br>
+
+  <button onclick="calcularDivisao()">Calcular por Cliente</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
