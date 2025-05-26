@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada Personalizada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+    }
+
+    #opcoesRepetir {
+      margin-top: 20px;
+      display: none;
+    }
+
+    button {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .tabuada {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabuada Personalizada</h2>
+  <label for="inicio">Escolha a tabuada de início (1 a 9):</label>
+  <input type="number" id="inicio" min="1" max="9">
+  <button onclick="mostrarTabuadas()">Mostrar Tabuadas</button>
+
+  <div id="resultado"></div>
+
+  <div id="opcoesRepetir">
+    <p>Deseja repetir o processo?</p>
+    <button onclick="repetir()">Sim</button>
+    <button onclick="encerrar()">Não</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
