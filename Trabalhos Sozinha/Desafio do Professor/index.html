@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Verificador de Palíndromos</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Verificador de Palíndromos</h1>
+    <input type="text" id="entrada" placeholder="Digite uma palavra...">
+    <br>
+
+    <!-- Botão que chama a função de verificação -->
+    <button onclick="verificarPalindromo()">Verificar</button>
+
+    <!-- Resultado será exibido aqui -->
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    // Função que verifica se um texto é um palíndromo
+    function ehPalindromo(texto) {
+      // Inverte o texto: divide em letras, reverte e junta novamente
+      const textoInvertido = texto.split("").reverse().join("");
+      
+      // Compara o texto original com o texto invertido
+      return texto === textoInvertido;
+    }
+
+    // Função chamada ao clicar no botão
+    function verificarPalindromo() {
+      // Pega o valor digitado no campo de entrada e remove espaços extras
+      const entrada = document.getElementById('entrada').value.trim();
+
+      // Seleciona a div onde o resultado será mostrado
+      const resultadoDiv = document.getElementById('resultado');
+
+      // Verifica se o campo está vazio
+      if (entrada === "") {
+        resultadoDiv.textContent = "Por favor, digite uma palavra.";
+        return;
+      }
+
+      // Chama a função ehPalindromo e exibe o resultado
+      if (ehPalindromo(entrada)) {
+        resultadoDiv.textContent = `"${entrada}" é um palíndromo! 🎉`;
+      } else {
+        resultadoDiv.textContent = `"${entrada}" não é um palíndromo. 😢`;
+      }
+    }
+  </script>
+
+</body>
+</html>

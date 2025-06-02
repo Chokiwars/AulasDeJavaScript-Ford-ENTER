@@ -1,0 +1,56 @@
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      width: 250px;
+      margin-bottom: 15px;
+    }
+
+    /* Botão de verificação */
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #00c9a7; /* Cor verde-água */
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    }
+
+    /* Efeito ao passar o mouse no botão */
+    button:hover {
+      background-color: #00b098;
+    }
+
+    /* Área de exibição do resultado */
+    .resultado {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
