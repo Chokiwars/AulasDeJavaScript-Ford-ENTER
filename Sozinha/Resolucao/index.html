@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolução</title>
+</head>
+
+<body>
+
+    <script>
+        let renascer;
+
+        do {
+        let HP = parseInt(prompt("Digite seus pontos de HP atual no Creatures of Sonaria!"));
+
+        if (isNaN(HP) || HP < 0) {
+            alert("Você não digitou uma pontuação de HP válida!");
+        } else if (HP === 0) {
+            alert("Você está morto!");
+        } else if (HP >= 1 && HP <= 1000) {
+            alert("Você está na categoria I!");
+        } else if (HP >= 1001 && HP <= 2000) {
+            alert("Você está na categoria II!");
+        } else if (HP >= 2001 && HP <= 3000) {
+            alert("Você está na categoria III!");
+        } else if (HP >= 3001 && HP <= 4000) {
+            alert("Você está na categoria IV!");
+        } else if (HP > 4000) {
+            alert("Você está na categoria V!");
+        } else {
+            alert("Você é a criatura mais poderosa que existe!");
+        }
+            renascer = prompt("Digite R para recomeçar novamente!");
+        } while ("r" == renascer || "R" == renascer);
+    </script>
+</body>
+
+</html>

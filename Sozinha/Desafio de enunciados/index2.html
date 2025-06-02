@@ -1,0 +1,30 @@
+<script>
+    // Criação de um array vazio para armazenar os números fornecidos pelo usuário
+    let numeros = [];
+
+    // Laço de repetição para solicitar 5 números ao usuário
+    for (let i = 1; i <= 5; i++) {
+        let numero = parseInt(prompt("Digite o número " + i + ":"));
+        
+        // Verificando se o valor digitado é um número válido
+        while (isNaN(numero)) {
+            numero = parseInt(prompt("Por favor, insira um número válido para o número " + i + ":"));
+        }
+        
+        // Adicionando o número ao array
+        numeros.push(numero);
+    }
+
+    // Inicializando a variável para armazenar o maior número
+    let maiorNumero = numeros[0]; // Inicializa com o primeiro número do array
+
+    // Laço de repetição para percorrer o array e encontrar o maior número
+    for (let i = 1; i < numeros.length; i++) {
+        if (numeros[i] > maiorNumero) {
+            maiorNumero = numeros[i]; // Atualiza o maior número se encontrar um número maior
+        }
+    }
+
+    // Exibindo o resultado com alert
+    alert("O maior número do array é: " + maiorNumero);
+</script>

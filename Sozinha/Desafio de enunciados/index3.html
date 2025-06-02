@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número - Array</title>
+    <script>
+        // Função para calcular o maior número
+        function calcularMaiorNumero() {
+            // Obtendo os valores dos inputs
+            let numeros = [];
+            for (let i = 1; i <= 5; i++) {
+                let valor = parseInt(document.getElementById("input" + i).value);
+                if (!isNaN(valor)) {
+                    numeros.push(valor);
+                }
+            }
+
+            // Verificando se o array não está vazio
+            if (numeros.length > 0) {
+                // Inicializando a variável para armazenar o maior número
+                let maiorNumero = numeros[0]; // Inicializa com o primeiro número do array
+
+                // Laço de repetição para percorrer o array e encontrar o maior número
+                for (let i = 1; i < numeros.length; i++) {
+                    if (numeros[i] > maiorNumero) {
+                        maiorNumero = numeros[i]; // Atualiza o maior número se encontrar um número maior
+                    }
+                }
+
+                // Exibindo o resultado na página HTML
+                document.getElementById("resultado").innerText = "O maior número do array é: " + maiorNumero;
+            } else {
+                document.getElementById("resultado").innerText = "Por favor, insira números válidos!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Maior Número</h1>
+
+    <p>Insira 5 números:</p>
+
+    <!-- Inputs para os números -->
+    <input type="number" id="input1" placeholder="Número 1">
+    <input type="number" id="input2" placeholder="Número 2">
+    <input type="number" id="input3" placeholder="Número 3">
+    <input type="number" id="input4" placeholder="Número 4">
+    <input type="number" id="input5" placeholder="Número 5">
+    
+    <button onclick="calcularMaiorNumero()">Calcular Maior Número</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

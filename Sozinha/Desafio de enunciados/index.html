@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maior Número</title>
+</head>
+
+<body>
+    <script>
+        // Declara a variável 'repetir' que vai controlar o laço de repetição
+        let repetir;
+
+        // Inicia o laço do-while, que vai se repetir enquanto o usuário desejar
+        do {
+            // Cria um array vazio onde os números digitados pelo usuário serão armazenados
+            let numeros = [];
+
+            // Laço for para capturar 5 números
+            for (let i = 0; i < 5; i++) {
+                // Pede para o usuário digitar um número. O prompt exibe a mensagem informando qual número ele está inserindo (ex: "Digite o número 1")
+                let numero = parseInt(prompt("Digite o número " + (i + 1) + ":"));
+
+                // Verifica se o número digitado é válido. Se não for (isNaN), solicita novamente até que o número seja válido
+                while (isNaN(numero)) {
+                    numero = parseInt(prompt("Por favor, insira um número válido para o número " + (i + 1) + ":"));
+                }
+
+                // Adiciona o número válido ao array 'numeros'
+                numeros.push(numero);
+            }
+
+            // Inicializa a variável 'maiorNumero' com o primeiro número do array
+            let maiorNumero = numeros[0];
+
+            // Laço para percorrer os números e encontrar o maior
+            for (let i = 1; i < numeros.length; i++) {
+                // Se o número atual do array for maior que o 'maiorNumero', atualiza o valor de 'maiorNumero'
+                if (numeros[i] > maiorNumero) {
+                    maiorNumero = numeros[i];
+                }
+            }
+
+            // Exibe um alerta com o maior número encontrado no array
+            alert("O maior número do array é: " + maiorNumero);
+
+            // Pergunta ao usuário se ele deseja repetir o processo. O resultado (true ou false) é armazenado na variável 'repetir'
+            repetir = confirm("Deseja repetir o processo?");
+            // O laço continua enquanto 'repetir' for verdadeiro
+        } while (repetir);
+    </script>
+</body>
+
+</html>
